@@ -7,9 +7,9 @@ import MovieDetailPage from './pages/MovieDetail/MovieDetailPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import 'bootstrap/dist/css/bootstrap.min.css'; //[240315] 스타일 적용시 반드시 필요
 
-// 홈페이지 /
-// 영화 전체보여주는 페이지 (서치) /movies
-// 영화 디테일 페이지 /movies/:id
+// [홈페이지] /
+// [영화 전체보여주는 페이지 (서치)] /movies
+// [영화 디테일 페이지] /movies/:id
 function App() {
   return (
     <Routes>
