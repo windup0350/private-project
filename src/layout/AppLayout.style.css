@@ -1,0 +1,40 @@
+
+body {
+    /* padding: 0; */
+    background-color: black !important; /*padding領域*/
+}
+
+.navbar-brand { /* ロゴ */
+    background-image: url('logo.png');
+    background-size: contain;
+    width: 120px;
+    height: 60px;
+    text-indent: -9999px; /* テキストを非表示 */
+}
+
+.navi-back {
+    padding: 15px;
+    background-color: black;
+}
+
+.tab-text {
+    color: white !important;
+    font-size: 30px !important;
+    font-family: 'CustomFont', sans-serif !important;
+}
+
+.d-flex .form-control {
+    background-color: rgb(176, 226, 178);
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('YujiMai-Regular.ttf') format('truetype'); /* フォントのパスを指定 */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+

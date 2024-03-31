@@ -1,0 +1,43 @@
+.card-layout {
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.5s;
+}
+/* [240328] 対応：１ページ当たり、カード数を調節しよう。PopularMovieSlide.jsx */
+
+
+.card-layout:hover {
+    transform: scale(1.2) translateZ(20px);
+    z-index: 2;
+}
+
+
+/* [240328] 問題：カードが拡大されるけど、大きさが
+   [240330] 解決：carousel-container */
+
+
+.card-info-overlay {
+    padding: 12px;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 10, 10, 0.8);
+    opacity: 0;
+    transition: all 0.8s;
+    color: white;
+    font-weight: bold;
+    overflow-wrap: break-word;
+}
+
+
+.card-info-overlay:hover {
+    opacity: 1;
+}
+
+
+.badge-layout {
+    margin: 5px 5px 5px 0;
+}
+
