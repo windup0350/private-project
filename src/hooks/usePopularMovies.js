@@ -7,9 +7,9 @@ const fetchPopularMovies = () => {
 
 // 왜 hook 을 만드는가?
 export const usePopularMoviesQuery = () => {
-    return useQuery ({
+    return useQuery({
         queryKey: ['movie-popular'],
         queryFn: fetchPopularMovies,
-        select:(result)=>result.data, //★data 만 리턴하겠다
+        select: (result) => result.data, //★data 만 리턴하겠다
     })
 }
