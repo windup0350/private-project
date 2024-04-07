@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./AppLayout.style.css"
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Outlet } from 'react-router-dom';// Router 안에 있는 자손들을 호출
+import { Outlet, useNavigate } from 'react-router-dom';// Router 안에 있는 자손들을 호출
 
 const AppLayout = () => {
+  const [keyword, setKeyword] = useState("");//[240406]
+  const navigate = useNavigate()
+
+  const searchByKeyword = (event) => { //[240406]
+    event.preventDefault();
+    navigate(`/movies?q=${keyword}`); // URL 바꿔주기
+    setKeyword(""); // 검색후 공란으로
+  }
+
   return (
     <div className='no-padding'>
       <Navbar expand="lg" className="bg-body-tertiary no-padding">
@@ -23,14 +32,16 @@ const AppLayout = () => {
               <Nav.Link href="/" className="tab-text">Home</Nav.Link>
               <Nav.Link href="/movies" className="tab-text">映画</Nav.Link>
             </Nav>
-            <Form className="d-flex">
+            <Form className="d-flex" onSubmit={searchByKeyword}>
               <Form.Control
                 type="search"
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                value={keyword} //[240406]
+                onChange={(event) => setKeyword(event.target.value)} //[240406] 변화시마다 세팅
               />
-              <Button variant="danger">検索</Button>
+              <Button variant="danger" type="submit">検索</Button>
             </Form>
           </Navbar.Collapse>
         </Container>
