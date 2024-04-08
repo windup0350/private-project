@@ -38,8 +38,9 @@ const Filter = ({
 
   return (
     <Accordion className="filter">
+
       <Accordion.Item eventKey="0">
-        <Accordion.Header>Sort</Accordion.Header>
+        <Accordion.Header>ソート</Accordion.Header>
         <Accordion.Body>
           <p className="filter-title">Sort Results By</p>
           <p className="sort-label">Sort by</p>
@@ -54,8 +55,9 @@ const Filter = ({
           </Dropdown>
         </Accordion.Body>
       </Accordion.Item>
+
       <Accordion.Item eventKey="1">
-        <Accordion.Header>Filter</Accordion.Header>
+        <Accordion.Header>日付フィルター</Accordion.Header>
         <Accordion.Body>
           <p className="filter-title">YEAR Filter</p>
           <p className="releaseYear-value">
@@ -70,8 +72,9 @@ const Filter = ({
           />
         </Accordion.Body>
       </Accordion.Item>
+
       <Accordion.Item eventKey="2">
-        <Accordion.Header>Genres</Accordion.Header>
+        <Accordion.Header>ジャンル</Accordion.Header>
         <Accordion.Body>
           <ul className="genre-list">
             {genreData?.map(({ name, id }) => (
@@ -85,6 +88,7 @@ const Filter = ({
           </ul>
         </Accordion.Body>
       </Accordion.Item>
+
     </Accordion>
   );
 };

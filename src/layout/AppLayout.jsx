@@ -22,7 +22,7 @@ const AppLayout = () => {
     <div className="no-padding">
       <Navbar expand="lg" className="bg-body-tertiary no-padding">
         <Container fluid className="Navbar-Container navi-back">
-          <Navbar.Brand href="#">MY CINEMA</Navbar.Brand>
+          <Navbar.Brand href="/">MY CINEMA</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -46,8 +46,8 @@ const AppLayout = () => {
                 value={keyword} //[240406]
                 onChange={(event) => setKeyword(event.target.value)} //[240406] 변화시마다 세팅
               />
-              <Button variant="danger" type="submit">
-                検索
+              <Button variant="danger" type="submit" className="search-button">
+                検 索
               </Button>
             </Form>
           </Navbar.Collapse>
