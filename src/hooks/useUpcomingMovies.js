@@ -2,7 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import api from "../utils/api";
 
 const fetchUpcomingMovies = () => {
-    return api.get(`/movie/upcoming`)
+    const today = new Date()
+    return api.get(`/discover/movie?primary_release_date.gte=${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`)
 }
 
 // 왜 hook 을 만드는가?

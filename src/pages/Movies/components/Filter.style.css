@@ -1,0 +1,116 @@
+.filter .accordion-item {
+    margin-bottom: 20px;
+    background: transparent;
+    border: 1px solid #fff !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+}
+
+.filter .accordion-button,
+.filter .accordion-button:not(.collapsed) {
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+
+}
+
+
+.filter .accordion-header {
+    overflow: hidden;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.filter .accordion-button.collapsed::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27white%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e");
+}
+
+.filter .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27white%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e") !important;
+    ;
+}
+
+.accordion-button:focus {
+    box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color) !important;
+}
+
+.accordion-body {
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+}
+
+.sort-label {
+    font-size: 14px;
+    color: skyblue;
+    margin-top: 20px;
+    margin-left: -100px;
+    margin-bottom: 5px;
+}
+
+.filter .dropdown-toggle,
+.filter .dropdown-toggle:hover,
+.filter .dropdown-toggle:focus,
+.filter .dropdown-toggle:active {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid #fff;
+    padding: 0 25px 10px 0;
+}
+
+.period-value {
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.period-value b {
+    font-size: 28px;
+}
+
+.filter-title {
+    margin: 0;
+}
+
+.range-slider .range-slider__thumb {
+    width: 16px;
+    height: 16px;
+    background: #dc3545;
+}
+
+.range-slider {
+    height: 5px;
+    margin-bottom: 20px;
+}
+
+.range-slider .range-slider__range {
+    background: #dc3545;
+}
+
+.filter .genre-list {
+    margin: 20px 0;
+    display: block;
+    text-align: left;
+}
+
+.filter .genre-item {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+.filter .genre-item.selected {
+    border: 1px solid #dc3545;
+    background: #dc3545;
+}
+
+.filter .genre-item button {
+    background: none;
+    border: 0;
+    color: #fff;
+}

@@ -5,7 +5,8 @@ import Homepage from './pages/Homepage/Homepage';
 import MoviesPage from './pages/Movies/MoviesPage';
 import MovieDetailPage from './pages/MovieDetail/MovieDetailPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
-import 'bootstrap/dist/css/bootstrap.min.css'; //[240315] 스타일 적용시 반드시 필요
+import 'bootstrap/dist/css/bootstrap.min.css'; //[240315] 스타일 적용시 반드시 필요;
+import MoviesSearchResultPage from './pages/MovieResultPage/MoviesSearchResultPage';
 
 // [홈페이지] /
 // [영화 전체보여주는 페이지 (서치)] /movies
@@ -13,14 +14,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'; //[240315] 스타일 적용시 �
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<AppLayout/>}>
-        <Route index element={<Homepage/>}/>
+      <Route path="/" element={<AppLayout />}>
+        <Route index element={<Homepage />} />
         <Route path="movies">
-          <Route index element={<MoviesPage/>}/>
-          <Route path=":id" element={<MovieDetailPage/>}/>
+          <Route index element={<MoviesPage />} />
+          <Route path=":id" element={<MovieDetailPage />} />
         </Route>
+        <Route path="movies/search" element={<MoviesSearchResultPage />} />
       </Route>
-      <Route path="*" element={<NotFoundPage/>}/>
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }
