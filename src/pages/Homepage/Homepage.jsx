@@ -11,11 +11,13 @@ import UpcomingMoviesSlide from './components/UpcomingMoviesSlide/UpcomingMovies
 
 const Homepage = () => {
   return (
-    <div className='slide-layout'>
+    <div>
       <Banner />
-      <PopularMovieSlide /> 
-      <TopRatedMoviesSlide /> 
-      <UpcomingMoviesSlide /> 
+      <div style={{ margin: '0 30px' }}>
+        <PopularMovieSlide />
+        <TopRatedMoviesSlide />
+        <UpcomingMoviesSlide />
+      </div>
     </div>
   )
 }
