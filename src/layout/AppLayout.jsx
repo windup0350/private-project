@@ -34,7 +34,7 @@ const AppLayout = () => {
                 Home
               </Nav.Link>
               <Nav.Link href="/movies" className="tab-text">
-                映画
+                List
               </Nav.Link>
             </Nav>
             <Form className="d-flex" onSubmit={searchByKeyword}>
