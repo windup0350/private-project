@@ -18,7 +18,8 @@ import ReactPaginate from 'react-paginate';
 // 참고: https://codepen.io/monsieurv/pen/abyJQWQ 
 
 const MoviesPage = () => {
-  const [query, setQuery] = useSearchParams();//[ミス２] URL의 Query값을 불러와야 함.
+  // const [query, setQuery] = useSearchParams();//[ミス２] URL의 Query값을 불러와야 함.
+  const [query] = useSearchParams();//[ミス２] URL의 Query값을 불러와야 함.
   const [page, setPage] = useState(1);
   const keyword = query.get("q");
 
@@ -54,7 +55,7 @@ const MoviesPage = () => {
             ))}
           </Row>
           
-          <div className="pagination-container">
+          <div className="pagination-container" style={{margin: '30px'}}>
             <ReactPaginate //[240407]
               onPageChange={handlePageClick}
               pageRangeDisplayed={5}
